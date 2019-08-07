@@ -26,7 +26,8 @@ public class HelloController {
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		model.addAttribute("Hello", "Hello, Spring!" );
+		//Hello‚ÉƒZƒbƒg
+		model.addAttribute("messege", "<script>alert()</script>" );
 		
 		return "Hello";
 	}
