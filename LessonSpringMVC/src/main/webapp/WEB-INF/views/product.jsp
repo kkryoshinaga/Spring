@@ -13,9 +13,9 @@
 		<c:out value="${message}" />
 	</p>
 	<form:form modelAttribute="productForm"> 
-	名前<form:input path="name" />
+	名前<form:input path="name" placeholder="名前を入力してください"/>
 		<br /> 
-	価格<form:input path="price" />
+	価格<form:input path="price" placeholder="0"/>
 		<br />
 		<input type="submit" value="送信">
 		<br />
