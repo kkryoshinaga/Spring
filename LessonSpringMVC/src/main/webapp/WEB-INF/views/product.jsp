@@ -13,12 +13,22 @@
 		<table border="1">
 			<tr>
 				<th>名前</th>
-				<th>価格</th>
+				<th>年齢</th>
+				<th>性別</th>
+				<th>E-mail</th>
+				<th>出身地</th>
+				<th>興味のある言語</th>
+				<th>備考</th>
 			</tr>
 			<c:forEach var="productForm" items="${productList}">
 				<tr>
 					<td><c:out value="${productForm.name}"></c:out></td>
 					<td><c:out value="${productForm.price}"></c:out></td>
+					<td><c:out value="${productForm.gender}"></c:out></td>
+					<td><c:out value="${productForm.mail}"></c:out></td>
+					<td><c:out value="${productForm.birthplace}"></c:out></td>
+					<td><c:out value="${productForm.favoriteLangs}"></c:out></td>
+					<td><c:out value="${productForm.others}"></c:out></td>
 				</tr>
 			</c:forEach>
 		</table>
@@ -29,8 +39,20 @@
 	</p>
 	<form:form modelAttribute="productForm"> 
 	名前<form:input path="name" placeholder="名前を入力してください" />
+		<form:errors path="name" cssStyle="color:red" />
 		<br /> 
-	価格<form:input path="price" placeholder="0" />
+	年齢<form:input path="price" placeholder="0" />
+		<form:errors path="price" cssStyle="color:red" />
+		<br />
+	性別<form:radiobuttons path="gender" items="${genders}" />
+		<br />
+	E-mail<form:input path="mail" placeholder="E-mailを入力してください" />
+		<br />
+	出身地<form:select path="birthplace" items="${birthplaces}" multiple="false" />
+		<br />
+	興味のある言語<form:checkboxes path="favoriteLangs" items="${langs}" />
+		<br/>
+	備考<textarea name ="others"rows="4" cols="40"></textarea>
 		<br />
 		<input type="submit" value="送信">
 		<br />
