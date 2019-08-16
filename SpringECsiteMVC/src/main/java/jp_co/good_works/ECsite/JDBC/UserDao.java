@@ -1,4 +1,4 @@
-package jp_co.good_works.lesson;
+package jp_co.good_works.ECsite.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
