@@ -23,7 +23,7 @@
 			<c:forEach var="productForm" items="${productList}">
 				<tr>
 					<td><c:out value="${productForm.name}"></c:out></td>
-					<td><c:out value="${productForm.price}"></c:out></td>
+					<td><c:out value="${productForm.price}歳"></c:out></td>
 					<td><c:out value="${productForm.gender}"></c:out></td>
 					<td><c:out value="${productForm.mail}"></c:out></td>
 					<td><c:out value="${productForm.birthplace}"></c:out></td>
@@ -52,7 +52,8 @@
 		<br />
 	興味のある言語<form:checkboxes path="favoriteLangs" items="${langs}" />
 		<br/>
-	備考<textarea name ="others"rows="4" cols="40"></textarea>
+	備考<br />
+		<textarea name ="others"rows="4" cols="40"></textarea>
 		<br />
 		<input type="submit" value="送信">
 		<br />
