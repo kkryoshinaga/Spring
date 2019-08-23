@@ -14,9 +14,9 @@ public class UserDao {
 	Connection cnct = null;
 	Statement st  = null;
 	ResultSet rs = null;
-	boolean flag =false;
+	String money = null;
 	
-	public boolean UserDaos(String name,String password){
+	public String UserDaos(String name,String password){
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
@@ -29,8 +29,9 @@ public class UserDao {
 			while(rs.next()) {
 				String userId = rs.getString("USERID");
 				String ps = rs.getString("PASSWORD");
+				String money = rs.getString("money");
 				if(name.equals(userId) && password.equals(ps)) {
-					flag = true;
+					this.money = money;
 				}
 				
 			}
@@ -57,7 +58,7 @@ public class UserDao {
 
 		}
 		
-		return flag;
+		return money;
 	}
 
 }

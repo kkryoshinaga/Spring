@@ -11,7 +11,7 @@ public class LoginLogic {
 			throws LoginException {
 		
 		UserDao ud = new UserDao();
-		flag2 = ud.UserDaos(userId, password);
+		//flag2 = ud.UserDaos(userId, password);
 		
 		if(flag2==true) {
 			loginInfo = new LoginInfo();
