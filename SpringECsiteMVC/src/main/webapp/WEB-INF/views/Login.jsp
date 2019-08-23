@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+	pageEncoding="UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <html>
 <head>
@@ -16,11 +16,16 @@
 		<form:errors path="userId" cssStyle="color:red" />
 		<br>
 		<br>
-		PASS:<form:password path="password" />&nbsp; <form:errors path="password"
-			cssStyle="color:red" />
+		PASS:<form:password path="password" />&nbsp; 
+		<form:errors path="password" cssStyle="color:red" />
 		<br>
 		<br>
-		<input type="submit">
+		<input type="submit" name="send" value="送信">
+	</form:form>
+	<br>
+		<br>
+	<form:form modelAttribute="RegsterForm">
+	<input type="submit" name="regster" value ="新規登録">
 	</form:form>
 </body>
 </html>

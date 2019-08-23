@@ -1,14 +1,25 @@
 package jp_co.good_works.ECsite.Form;
 
-//import org.hibernate.validator.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.*;
 
 public class LoginForm {
 	
-	//@NotEmpty
+	@NotEmpty
 	private String userId;
 	
-	//@NotEmpty
+	@NotEmpty
 	private String password;
+	
+	private String send;
+
+	public String getSend() {
+		return send;
+	}
+
+	public void setSend(String send) {
+		this.send = send;
+	}
 
 	public String getUserId() {
 		return userId;

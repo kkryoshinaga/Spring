@@ -23,6 +23,11 @@
 	
 	<context:component-scan base-package="jp_co.good_works.ECsite" />
 	
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<beans:property name= "basename" value="classpath:ValidatorMessages" />
+	</beans:bean>
+	
 	
 	
 </beans:beans>

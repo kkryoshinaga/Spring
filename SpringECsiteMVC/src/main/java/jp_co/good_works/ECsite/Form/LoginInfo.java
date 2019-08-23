@@ -1,20 +1,40 @@
 package jp_co.good_works.ECsite.Form;
 
-//import org.hibernate.validator.constraints.NotEmpty;
 
-public class LoginInfo {
-	//@NotEmpty
-	private String userId;
+
+public  class LoginInfo {
 	
-	//@NotEmpty
-	private String password;
+	static String userId;
+	
+	
+	static String password;
+	
+	static String money;
+	
+	static String id ;
+
+	public static String getId() {
+		return id;
+	}
+
+	public static void setId(String id) {
+		LoginInfo.id = id;
+	}
+
+	public String getMoney() {
+		return money;
+	}
+
+	public void setMoney(String money) {
+		LoginInfo.money = money;
+	}
 
 	public String getUserId() {
 		return userId;
 	}
 
 	public void setUserId(String userId) {
-		this.userId = userId;
+		LoginInfo.userId = userId;
 	}
 
 	public String getPassword() {
@@ -22,7 +42,7 @@ public class LoginInfo {
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		LoginInfo.password = password;
 	}
 	
 	

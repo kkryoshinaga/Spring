@@ -7,26 +7,23 @@ import jp_co.good_works.ECsite.JDBC.UserDao;
 
 public class LoginLogic {
 	private LoginInfo loginInfo = null;// LoginForm とは別に作成 
-	boolean flag = false ;
-	boolean flag2 = false ;
+	boolean flag = false ; //flag管理
+	String money = null ; //残金を設定
 	/* ログインを実行する */ 
 	public LoginInfo login(String userId, String password) 
 			throws LoginException {
-		
+	
+		//UserDaoをインスタンス化し、残金を取得
 		UserDao ud = new UserDao();
-		flag2 = ud.UserDaos(userId, password);
+		money = ud.UserDaos(userId, password);
 		
-		if(flag2==true) {
-			loginInfo = new LoginInfo();
-			
-			loginInfo.setUserId(userId);
-			loginInfo.setPassword(password);
+		if(money!=null) {
 			
 			flag = true ;
 			
 			
 		}else {
-		throw new LoginException("ユーザIDまはたパスワードが違います。");
+		throw new LoginException("ユーザIDまたはパスワードが違います。");
 		}
 		return loginInfo ;
 		
