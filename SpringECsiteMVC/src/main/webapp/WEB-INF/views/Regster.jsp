@@ -9,7 +9,9 @@
 <title>会員登録</title>
 </head>
 <body>
+<div align="right">
 <p>Date : ${serverTime}</p>
+</div>
 <br><br>
 	<h2>${message}</h2>
 	<form:form modelAttribute="loginForm">

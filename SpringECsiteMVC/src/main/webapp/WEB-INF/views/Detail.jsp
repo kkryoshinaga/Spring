@@ -9,7 +9,7 @@
 <title>商品詳細</title>
 </head>
 <body>
-	<div>
+	<div align="right">
 		<p>Date : ${serverTime}</p>
 		<p>
 			ログイン中のユーザ ：

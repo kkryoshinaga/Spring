@@ -9,7 +9,7 @@
 <title>チャージ</title>
 </head>
 <body>
-	<div>
+	<div align="right">
 		<p>Date : ${serverTime}</p>
 		<p>
 			ログイン中のユーザ ：

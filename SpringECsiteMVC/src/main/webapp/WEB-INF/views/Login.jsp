@@ -10,6 +10,9 @@
 </head>
 <body>
 	<a>ログイン画面</a>
+	<div align="right">
+	<p>Date : ${serverTime}</p>
+	</div>
 	<h2>${message}</h2>
 	<form:form modelAttribute="loginForm">
 		ID:　 <form:input path="userId" />&nbsp; 
